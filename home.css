@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("./photo/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+li {
+  list-style-type: none;
+}
+a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+}
+/* nav-bar */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 50px;
+  background-color: rgba(162, 160, 160, 0.4);
+  border-bottom: 2px solid white;
+}
+.nav-logo {
+  width: 50px;
+  margin-right: 150px;
+}
+.nav-logo > img {
+  width: 100%;
+}
+.nav-list {
+  display: flex;
+  gap: 3rem;
+  font-size: 2rem;
+}
+/* end of nav bar  */
+/* After */
+.container::after {
+  margin: 7rem auto;
+  content: "";
+  display: block;
+  max-width: 150px;
+  height: 5px;
+  border-radius: 100px;
+  background: linear-gradient(to right, #cecece, #838383);
+  animation: after 10s ease infinite;
+}
+@keyframes after {
+  0% {
+    background: linear-gradient(to right, #cecece, #838383);
+  }
+  20% {
+    background: linear-gradient(to right, red, orange);
+  }
+  40% {
+    background: linear-gradient(to right, lightgreen, yellow);
+  }
+  60% {
+    background: linear-gradient(to right, cyan, #dfff00);
+  }
+  80% {
+    background: linear-gradient(to right, #3fff00, #29ab87);
+  }
+  100% {
+    background: linear-gradient(to right, #0000ff, #87d3f8);
+  }
+}
+.contain {
+  margin: 150px auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.product {
+  width: 250px;
+  height: 300px;
+  border: 2px solid white;
+  border-radius: 25px;
+  box-shadow: 0 0 50px gray;
+  background-color: rgba(162, 161, 161, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  color: black;
+  transition: all 0.5s ease;
+}
+/* hover */
+.product:hover {
+  background: transparent;
+  filter: drop-shadow(0 0 15px white);
+  color: white;
+  transform: scale(1.2);
+}
+.product:hover > .mac {
+  border-bottom: 2px solid white;
+}
+.product:hover > .iphone {
+  border-bottom: 2px solid white;
+}
+.product:hover > .ipad {
+  border-bottom: 2px solid white;
+}
+.product:hover > .airpods {
+  border-bottom: 2px solid white;
+}
+.product:hover > .applewatch {
+  border-bottom: 2px solid white;
+}
+.heading {
+  font-size: 2.5rem;
+  text-shadow: 0 0 5px;
+  margin-top: 1.5rem;
+}
+.apple-watch-heading {
+  font-size: 2.3rem;
+  margin-top: 1.8rem;
+}
+/* Mac */
+.mac {
+  width: 250px;
+}
+.mac > img {
+  width: 100%;
+}
+/* IPhone */
+.iphone {
+  width: 140px;
+}
+.iphone > img {
+  width: 100%;
+}
+/* IPad */
+.ipad {
+  width: 250px;
+}
+.ipad > img {
+  width: 100%;
+}
+/* Air Pods */
+.airpods {
+  width: 140px;
+}
+.airpods > img {
+  width: 100%;
+}
+.applewatch {
+  width: 150px;
+}
+.applewatch > img {
+  width: 100%;
+}
+.mac > img,
+.iphone > img,
+.ipad > img,
+.airpods > img,
+.applewatch > img {
+  filter: drop-shadow(0 0 10px black);
+}
