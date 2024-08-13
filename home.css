@@ -57,7 +57,7 @@ a {
   background: linear-gradient(to right, #cecece, #838383);
   animation: after 10s ease infinite;
 }
-@keyframes after {
+/* @keyframes after {
   0% {
     background: linear-gradient(to right, #cecece, #838383);
   }
@@ -76,28 +76,33 @@ a {
   100% {
     background: linear-gradient(to right, #0000ff, #87d3f8);
   }
-}
+} */
 .contain {
-  margin: 150px auto;
+  margin: 100px auto;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow-x: scroll;
+  padding: 50px 170px;
   gap: 50px;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 .product {
-  width: 250px;
-  height: 300px;
+  width: 300px;
+  height: 350px;
   border: 2px solid white;
   border-radius: 25px;
   box-shadow: 0 0 50px gray;
   background-color: rgba(162, 161, 161, 0.7);
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  color: black;
   transition: all 0.5s ease;
 }
 /* hover */
@@ -122,6 +127,9 @@ a {
 .product:hover > .applewatch {
   border-bottom: 2px solid white;
 }
+.product:hover > .vision-pro {
+  border-bottom: 2px solid white;
+}
 .heading {
   font-size: 2.5rem;
   text-shadow: 0 0 5px;
@@ -133,42 +141,49 @@ a {
 }
 /* Mac */
 .mac {
-  width: 250px;
+  width: 280px;
 }
 .mac > img {
   width: 100%;
 }
 /* IPhone */
 .iphone {
-  width: 140px;
+  width: 165px;
 }
 .iphone > img {
   width: 100%;
 }
 /* IPad */
 .ipad {
-  width: 250px;
+  width: 280px;
 }
 .ipad > img {
   width: 100%;
 }
 /* Air Pods */
 .airpods {
-  width: 140px;
+  width: 165px;
 }
 .airpods > img {
   width: 100%;
 }
 .applewatch {
-  width: 150px;
+  width: 175px;
 }
 .applewatch > img {
+  width: 100%;
+}
+.vision-pro {
+  width: 290px;
+}
+.vision-pro > img {
   width: 100%;
 }
 .mac > img,
 .iphone > img,
 .ipad > img,
 .airpods > img,
-.applewatch > img {
+.applewatch > img,
+.vision-pro > img {
   filter: drop-shadow(0 0 10px black);
 }
